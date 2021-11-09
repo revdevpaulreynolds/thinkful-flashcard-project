@@ -13,7 +13,7 @@ function DeckCard() {
     function loadDeck() {
         readDeck(deckId).then(setDeck);
     }
-
+    
     function handleDelete() {
         const confirmed = window.confirm(
             "Delete this deck?\n\nYou will not be able to recover it."

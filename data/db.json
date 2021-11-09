@@ -53,6 +53,13 @@
       "back": "b",
       "deckId": 1,
       "id": 7
+    },
+    {
+      "cards": [],
+      "front": "Paul-waul",
+      "back": "Teddy is sometimes helpful. ;)",
+      "deckId": 1,
+      "id": 8
     }
   ]
 }

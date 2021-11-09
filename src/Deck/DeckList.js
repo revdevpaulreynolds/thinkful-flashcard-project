@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom"
 import { listDecks, deleteDeck } from "../utils/api";
-import DeckCard from "./DeckCard"
+// import DeckCard from "./DeckCard"
 
 export default function Decks() {
     const [decks, setDecks] = useState([]);
@@ -32,29 +32,30 @@ export default function Decks() {
     }
 
     const list = decks.map((deck) => (
-        // <DeckCard deck={deck} deleteThisDeck={deleteThisDeck} />
+        // <DeckCard thisDeck={deck} deleteThisDeck={deleteThisDeck} />
         <li className="card" key={deck.id}>
             <div className="card-body">
                 <span>
-                <h3 className="card-title">
+                <h4 className="card-title">
                     {deck.name}
-                </h3>
-                <h5 className="card-subtitle">
+                    <div className="float-right small">
                     {deck.cards.length + " cards in deck"}
-                </h5>
+                    </div>
+                </h4>
+                
                 </span>
                 <div>
                     {deck.description}
                 </div>
                 {/* Bring to Deck screen */}
-                <Link to="/decks/:deckId">
+                <Link to={`/decks/${deck.id}`}>
                 <button href="#" type="button" className="btn btn-secondary mr-2 btn-md">
                     <span className="oi oi-eye mr-1"></span>
                     View
                 </button>
                 </Link>
                 {/* Bring to Study screen */}
-                <Link to="/decks/{deck.id}/study">
+                <Link to={`/decks/${deck.id}/study`}>
                 <button type="button" className="btn btn-primary btn-md">
                     <span className="oi oi-book mr-1"></span>
                     Study
@@ -65,7 +66,6 @@ export default function Decks() {
                     <span className="oi oi-trash"></span>
                 </button>
             </div>
-            
         </li>
         )
     )

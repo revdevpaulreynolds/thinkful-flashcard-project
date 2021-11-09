@@ -38,7 +38,6 @@ function CardList({ deck, onCardDelete }) {
         <div className="mt-4 card-list">
           <h3>Cards</h3>
           <ul className="list-group">{list}</ul>
-          {cards}
         </div>
     );
 }
