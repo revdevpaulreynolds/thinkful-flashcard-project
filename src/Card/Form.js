@@ -69,7 +69,6 @@ function CardForm({
             </button>
             </fieldset>
           </form>
-        {console.log('Form page: ' + card.front)}
         </div>
       );
 }
