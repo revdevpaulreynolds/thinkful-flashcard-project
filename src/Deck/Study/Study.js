@@ -31,9 +31,9 @@ export default function Study() {
     const card = deck.cards[cardNumber - 1];
     if(cardCount <= 2) {
         return (
-            <StudyCard name={deck.name} deckId={deckId}>
+            <StudyPage name={deck.name} deckId={deckId}>
                 <NotEnough deckId={deckId} cardCount={cardCount} />
-            </StudyCard>
+            </StudyPage>
         )
     }
     

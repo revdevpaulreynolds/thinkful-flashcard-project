@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import {useParams} from "react-router-dom";
+import { readDeck } from "../utils/api";
 
 function DeckForm({
     onSubmit,
@@ -6,6 +8,13 @@ function DeckForm({
     initialState = { name: "", description: "" },
 }) {
     const [deck, setDeck] = useState(initialState);
+
+    const { deckId } = useParams();
+
+    useEffect(() => {
+      if (deckId)
+      readDeck(deckId).then(setDeck)
+    }, [deckId]);
 
     function changeHandler({ target: { name, value }}) {
         setDeck((prevState) => ({

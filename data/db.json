@@ -11,8 +11,8 @@
       "id": 2
     },
     {
-      "name": "Paul",
-      "description": "Stuff",
+      "name": "Paul is neat",
+      "description": "Stuff is cool",
       "id": 3
     }
   ],
@@ -60,6 +60,32 @@
       "back": "Teddy is sometimes helpful. ;)",
       "deckId": 1,
       "id": 8
+    },
+    {
+      "cards": [],
+      "front": "Things!",
+      "back": "Stuff!",
+      "deckId": 1,
+      "id": 9
+    },
+    {
+      "cards": [],
+      "front": "guys",
+      "back": "hey",
+      "deckId": 3,
+      "id": 10
+    },
+    {
+      "front": "Girls",
+      "back": "Heyer!",
+      "deckId": 3,
+      "id": 11
+    },
+    {
+      "front": "WHOA",
+      "back": "YEAH",
+      "deckId": 3,
+      "id": 12
     }
   ]
 }

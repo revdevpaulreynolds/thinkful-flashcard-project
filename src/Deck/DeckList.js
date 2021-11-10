@@ -24,10 +24,15 @@ export default function Decks() {
         return () => ac.abort();
     }, [])
 
-    async function deleteThisDeck(deckId) {
-        const result = window.confirm("Delete this deck? You will not be able to recover it.")
+    function deleteThisDeck(deckId) {
+        const result = window.confirm("Delete this deck?\n\nYou will not be able to recover it.")
         if (result) {
-            await deleteDeck(deckId);
+            deleteDeck(deckId).then(() => {
+                const myDecks = listDecks();
+                setDecks(myDecks);
+            }
+               
+            );
         }
     }
 
@@ -62,7 +67,7 @@ export default function Decks() {
                 </button>
                 </Link>
                 {/* make warning message with OK or cancel */}
-                <button onClick={deleteThisDeck} type="button" className="btn btn-danger float-right">
+                <button onClick={() => deleteThisDeck(deck.id)} type="button" className="btn btn-danger float-right">
                     <span className="oi oi-trash"></span>
                 </button>
             </div>
