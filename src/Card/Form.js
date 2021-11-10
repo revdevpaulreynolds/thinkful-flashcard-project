@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
 function CardForm({
+    // utility,
+    title,
     onSubmit,
     onDone,
     deckName = "Loading...",
@@ -8,7 +10,6 @@ function CardForm({
     doneBtnLabel = "Done",
 }) {
     const [card, setCard] = useState(initialState);
-
 
     function changeHandler({ target: { name, value }}) {
         setCard((prevState) => ({
@@ -23,12 +24,13 @@ function CardForm({
         onSubmit({ ...card });
         setCard({ front: "", back: "" });
     }
-
+  
     return (
         <div>
           <form onSubmit={submitHandler} className="card-form">
             <fieldset>
-              <legend>{deckName}: Add Card</legend>
+              {/* <legend>{deckName}: {utility} Card</legend> */}
+              <legend>{deckName}: {title} Card</legend>
               <div className="form-group">
                 <label htmlFor="front">Front</label>
                 <textarea
@@ -59,7 +61,7 @@ function CardForm({
                 className="btn btn-secondary mr-2"
                 onClick={onDone}
                 tabIndex="4"
-            >
+              >
                 {doneBtnLabel}
             </button>
             <button type="submit" className="btn btn-primary" tabIndex="3">
@@ -67,6 +69,7 @@ function CardForm({
             </button>
             </fieldset>
           </form>
+        {console.log('Form page: ' + card.front)}
         </div>
       );
 }

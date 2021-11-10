@@ -33,7 +33,7 @@ function CardCreate() {
                     <Link to={`/decks/${deckId}`}>{deck.name}</Link>
                 </li>
                 <li className="breadcrumb-item active" aria-current="page">
-                    Create / Add Card
+                    Add Card
                 </li>
                 </ol>
             </nav>
@@ -42,6 +42,8 @@ function CardCreate() {
                 initialState={deck}
                 onSubmit={submitHandler} 
                 onDone={doneHandler}
+                title="Add"
+                // utility='Add'
             />
         </div>
     )

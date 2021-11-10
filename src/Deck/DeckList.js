@@ -24,15 +24,14 @@ export default function Decks() {
         return () => ac.abort();
     }, [])
 
+    // This is working to delete the deck, but the page is still not rendering.
     function deleteThisDeck(deckId) {
         const result = window.confirm("Delete this deck?\n\nYou will not be able to recover it.")
         if (result) {
-            deleteDeck(deckId).then(() => {
-                const myDecks = listDecks();
+            deleteDeck(deckId).then(async () => {
+                const myDecks = await listDecks();
                 setDecks(myDecks);
-            }
-               
-            );
+            });
         }
     }
 
@@ -44,7 +43,7 @@ export default function Decks() {
                 <h4 className="card-title">
                     {deck.name}
                     <div className="float-right small">
-                    {deck.cards.length + " cards in deck"}
+                    {deck.cards.length + " cards"}
                     </div>
                 </h4>
                 

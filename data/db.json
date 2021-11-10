@@ -11,8 +11,8 @@
       "id": 2
     },
     {
-      "name": "Paul is neat",
-      "description": "Stuff is cool",
+      "name": "Stuff",
+      "description": "playing around",
       "id": 3
     }
   ],
@@ -70,22 +70,10 @@
     },
     {
       "cards": [],
-      "front": "guys",
-      "back": "hey",
+      "front": "Bloop-dee-doop",
+      "back": "Bleep",
       "deckId": 3,
       "id": 10
-    },
-    {
-      "front": "Girls",
-      "back": "Heyer!",
-      "deckId": 3,
-      "id": 11
-    },
-    {
-      "front": "WHOA",
-      "back": "YEAH",
-      "deckId": 3,
-      "id": 12
     }
   ]
 }
