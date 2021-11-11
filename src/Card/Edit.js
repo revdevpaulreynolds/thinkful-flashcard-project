@@ -4,7 +4,7 @@ import React, {useEffect, useState} from "react"
 import CardForm from "./Form";
 
 function CardEdit({ title }) {
-    const {cardId, deckId} = useParams();
+    const { cardId, deckId } = useParams();
     const history = useHistory();
     
     const [card, setCard] = useState({ front: "", back: "" });
@@ -41,17 +41,17 @@ function CardEdit({ title }) {
         <div>
             <nav aria-label="breadcrumb">
                 <ol className="breadcrumb">
-                <li className="breadcrumb-item">
-                    <Link to="/">
-                        <span className="oi oi-home" /> Home
-                    </Link>
-                </li>
-                <li className="breadcrumb-item active" aria-current="page">
-                    <Link to={`/decks/${deckId}`}>Deck {deck.name}</Link>
-                </li>
-                <li className="breadcrumb-item active" aria-current="page">
-                    Edit Card {cardId}
-                </li>
+                    <li className="breadcrumb-item">
+                        <Link to="/">
+                            <span className="oi oi-home" /> Home
+                        </Link>
+                    </li>
+                    <li className="breadcrumb-item active" aria-current="page">
+                        <Link to={`/decks/${deckId}`}>Deck {deck.name}</Link>
+                    </li>
+                    <li className="breadcrumb-item active" aria-current="page">
+                        Edit Card {cardId}
+                    </li>
                 </ol>
             </nav>
             {paul}
