@@ -74,6 +74,19 @@
       "back": "Bleep",
       "deckId": 3,
       "id": 10
+    },
+    {
+      "cards": [],
+      "front": "Pop pop",
+      "back": "Mimi",
+      "deckId": 3,
+      "id": 11
+    },
+    {
+      "front": "Olive",
+      "back": "Reynolds",
+      "deckId": 3,
+      "id": 12
     }
   ]
 }
