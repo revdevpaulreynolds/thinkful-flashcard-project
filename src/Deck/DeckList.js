@@ -11,6 +11,7 @@ export default function Decks() {
         async function getDecks() {
             try {
                 const myDecks = await listDecks();
+                console.log(`My decks: ${myDecks}`);
                 setDecks(myDecks);
             } catch (error) {
                 if (error.name === "AbortError") {
@@ -35,6 +36,7 @@ export default function Decks() {
         }
     }
 
+    console.log(decks)
     const list = decks.map((deck) => (
         // <DeckCard thisDeck={deck} deleteThisDeck={deleteThisDeck} />
         <li className="card" key={deck.id}>
@@ -73,13 +75,15 @@ export default function Decks() {
         </li>
         )
     )
+    
 
     return (
         <div>
             <Link to="/decks/new" className="btn btn-secondary">
                 <span className="oi oi-plus" /> Create Deck
             </Link>
-            <ul className="list-group mt-2 deck-list">{list}</ul>
+            <ul className="list-group mt-2 deck-list">{list && list}</ul>
+            {console.log(decks)}
         </div>
     )
 }
