@@ -15,24 +15,19 @@ function CardEdit({ title }) {
         readCard(cardId).then(setCard);
     }, [deckId, cardId])
 
-    function submitHandler(card) {
+    async function submitHandler(card) {
         console.log(`card: ${JSON.stringify(card)}`)
-        updateCard(card).then(doneHandler);
+        await updateCard(card)
+        history.push(`/decks/${deck.id}`);
     }
 
-    function doneHandler() {
-        history.push(`/decks/${deck.id}`)
-    }
-    console.log("card: ", card);
     const editCurrentCard = card.id ? (
         <CardForm 
             onSubmit={submitHandler}
-            onDone={doneHandler}
             initialState={card}
             deckName={deck.name}
             doneBtnLabel="Cancel"
             title="Edit"
-            // utility='Edit'
         />
     ) : (
         <p>Loading...</p>

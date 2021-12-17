@@ -6,7 +6,7 @@ import CardForm from "./Form";
 function CardCreate() {
     const history = useHistory();
     const { deckId } = useParams();
-    const [deck, setDeck] = useState({ cards: [] });
+    const [deck, setDeck] = useState({cards: []});
 
     useEffect(() => {
         readDeck(deckId).then(setDeck)
@@ -39,7 +39,7 @@ function CardCreate() {
             <CardForm 
                 deckId={deckId}
                 deckName={deck.name}
-                initialState={deck}
+                initialState={{front: "", back: ""}}
                 onSubmit={submitHandler} 
                 // onDone={doneHandler}
                 title="Add"
