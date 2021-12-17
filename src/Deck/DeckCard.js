@@ -19,7 +19,7 @@ function DeckCard() {
             "Delete this deck?\n\nYou will not be able to recover it."
         );
         if (confirmed) {
-            deleteDeck(deck.id).then(() => history.push("/decks"));
+            deleteDeck(deck.id).then(() => history.push("/"));
         }
     }
 

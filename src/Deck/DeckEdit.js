@@ -30,7 +30,7 @@ function DeckEdit() {
                     </Link>
                 </li>
                 <li className="breadcrumb-item">
-                    <Link to={`/decks/${deck}`}>
+                    <Link to={`/decks/${deckId}`}>
                         {deck.name}
                     </Link>
                 </li>

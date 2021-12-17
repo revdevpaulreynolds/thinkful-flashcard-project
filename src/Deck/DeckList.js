@@ -11,7 +11,6 @@ export default function Decks() {
         async function getDecks() {
             try {
                 const myDecks = await listDecks();
-                console.log(`My decks: ${myDecks}`);
                 setDecks(myDecks);
             } catch (error) {
                 if (error.name === "AbortError") {

@@ -16,14 +16,15 @@ function CardEdit({ title }) {
     }, [deckId, cardId])
 
     function submitHandler(card) {
+        console.log(`card: ${JSON.stringify(card)}`)
         updateCard(card).then(doneHandler);
     }
 
     function doneHandler() {
         history.push(`/decks/${deck.id}`)
     }
-
-    const paul = card.id ?  (
+    console.log("card: ", card);
+    const editCurrentCard = card.id ? (
         <CardForm 
             onSubmit={submitHandler}
             onDone={doneHandler}
@@ -54,7 +55,7 @@ function CardEdit({ title }) {
                     </li>
                 </ol>
             </nav>
-            {paul}
+            {editCurrentCard}
         </div> 
     )
 }

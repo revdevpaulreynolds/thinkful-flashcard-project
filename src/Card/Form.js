@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory, useParams } from "react-router-dom";
 
 function CardForm({
     // utility,
@@ -18,11 +19,15 @@ function CardForm({
         }));
     }
 
+    let history = useHistory();
+    const {deckId} = useParams();
+
     function submitHandler(event) {
         event.preventDefault();
         event.stopPropagation();
         onSubmit({ ...card });
-        setCard({ front: "", back: "" });
+        setCard({ front: "", back: "" })
+        history.push(`/decks/${deckId}`);
     }
   
     return (

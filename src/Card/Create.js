@@ -12,13 +12,12 @@ function CardCreate() {
         readDeck(deckId).then(setDeck)
     }, [deckId])
 
-    function submitHandler(card) {
-        createCard(deckId, card);
-    }
-
-    function doneHandler() {
+    async function submitHandler(card) {
+        await createCard(deckId, card);
         history.push(`/decks/${deckId}`);
     }
+
+    
 
     return (
         <div>
@@ -38,10 +37,11 @@ function CardCreate() {
                 </ol>
             </nav>
             <CardForm 
+                deckId={deckId}
                 deckName={deck.name}
                 initialState={deck}
                 onSubmit={submitHandler} 
-                onDone={doneHandler}
+                // onDone={doneHandler}
                 title="Add"
                 // utility='Add'
             />

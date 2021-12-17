@@ -7,7 +7,9 @@ function DeckCreate() {
     const history = useHistory();
 
     function submitHandler(deck) {
-        createDeck(deck).then((savedDeck) => history.push(`/decks/${savedDeck.id}`))
+        createDeck(deck).then((savedDeck) => {
+            history.push(`/decks/${savedDeck.id}`)
+        })
     }
 
     function cancel() {
