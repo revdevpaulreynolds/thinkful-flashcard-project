@@ -35,7 +35,6 @@ export default function Decks() {
         }
     }
 
-    console.log(decks)
     const list = decks.map((deck) => (
         // <DeckCard thisDeck={deck} deleteThisDeck={deleteThisDeck} />
         <li className="card" key={deck.id}>
@@ -82,7 +81,6 @@ export default function Decks() {
                 <span className="oi oi-plus" /> Create Deck
             </Link>
             <ul className="list-group mt-2 deck-list">{list && list}</ul>
-            {console.log(decks)}
         </div>
     )
 }

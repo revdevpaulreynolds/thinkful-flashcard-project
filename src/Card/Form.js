@@ -20,7 +20,6 @@ function CardForm({
     function submitHandler(event) {
         event.preventDefault();
         event.stopPropagation();
-        console.log(`Frontend submit handler card: ${card}`)
         onSubmit({ ...card });
         setCard({ front: "", back: "" })
     }

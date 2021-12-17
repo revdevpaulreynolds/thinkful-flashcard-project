@@ -14,10 +14,11 @@ function CardCreate() {
 
     async function submitHandler(card) {
         await createCard(deckId, card);
-        history.push(`/decks/${deckId}`);
     }
 
-    
+    async function doneHandler() {
+        history.push(`/decks/${deckId}`);
+    }
 
     return (
         <div>
@@ -41,7 +42,7 @@ function CardCreate() {
                 deckName={deck.name}
                 initialState={{front: "", back: ""}}
                 onSubmit={submitHandler} 
-                // onDone={doneHandler}
+                onDone={doneHandler}
                 title="Add"
                 // utility='Add'
             />

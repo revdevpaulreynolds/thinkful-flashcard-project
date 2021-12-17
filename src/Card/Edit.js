@@ -16,7 +16,6 @@ function CardEdit({ title }) {
     }, [deckId, cardId])
 
     async function submitHandler(card) {
-        console.log(`card: ${JSON.stringify(card)}`)
         await updateCard(card)
         history.push(`/decks/${deck.id}`);
     }
