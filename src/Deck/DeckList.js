@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom"
 import { listDecks, deleteDeck } from "../utils/api";
-// import DeckCard from "./DeckCard"
 
 export default function Decks() {
     const [decks, setDecks] = useState([]);
