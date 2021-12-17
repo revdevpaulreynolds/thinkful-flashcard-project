@@ -11,3 +11,5 @@ Initially, the data was available through JSON objects, though I wanted to build
 Even though I didn't use Python and Flask for this, JavaScript and React have been very valuable tools to learn about in the coding bootcamp from which I am nearing graduation. And the functionality that Jinja affords of being able to accomplish logical operations in webpages is automatic in JavaScript. In addition, React has been very interesting to use in learning how to track and maintain state, and I can see this will be indispensible for creating and maintaining maximally interactive web apps.
 
 Thanks for what you do, CS50!
+
+EDIT: now with working backend!
